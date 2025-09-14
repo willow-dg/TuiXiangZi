@@ -19,7 +19,7 @@ public class GameImageUtil {
             boxImage2=ImageIO.read(new File(IMAGE_PATH,"pic3.png"));
             wallImage=ImageIO.read(new File(IMAGE_PATH,"pic1.png"));
             destinationImage=ImageIO.read(new File(IMAGE_PATH,"pic4.png"));
-            backgroundImage=ImageIO.read(new File(IMAGE_PATH,"pic9.png"));
+            backgroundImage=ImageIO.read(new File(IMAGE_PATH,"pic-back.png"));
         }catch (Exception e){
             e.printStackTrace();
         }
