@@ -15,13 +15,14 @@ public class MainFrame extends JFrame {
     //构造函数
     public MainFrame() {
         setTitle("推箱子");//设置标题
-        setResizable(false);//不可调整大小
         setSize(width, height);//设置宽高
+        setVisible(true);//窗体可见
+        setResizable(false);//不可调整大小
         Toolkit toolkit = Toolkit.getDefaultToolkit();//获取系统该默认组件工具包
         Dimension d = toolkit.getScreenSize();//获取屏幕尺寸，赋给一个二维坐标对象
         //主窗口在屏幕中间
         setLocation((d.width- getWidth())/ 2, (d.height - getHeight()) / 2);
-        setVisible(true);
+//        setBackground(Color.green);// 窗体背景颜色
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);//单击关闭窗体不做任何操作
         addListener();//添加监听器
         setPanel(new StarPanel(this));      //载入开始面板

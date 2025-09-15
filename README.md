@@ -1,4 +1,24 @@
-# TuiXiangZi
+# TuiXiangZi（推箱子）
+
+## 项目简介
+
 这是根据《java项目开发全程实录（第5版）》第一部分，依照书中代码进行实现“推箱子”游戏；
 本项目的核心功能及实现技术如下：
-<img width="1613" height="1262" alt="image" src="https://github.com/user-attachments/assets/5e83f041-5763-4417-95fa-52eec6110c7d" />
+<img width="1613" height="auto" alt="image" src="https://github.com/user-attachments/assets/5e83f041-5763-4417-95fa-52eec6110c7d" />
+
+## 项目进度
+
+- 当前已经可以正常游玩“预先导入的关卡” 
+- 现将经典关卡的前两关导入
+
+## 存在问题
+
+非常遗憾，即使是照着book做的项目，也还是存在很多问题：
+
+- 经典关卡还未完全导入（事实上第二关还存在矩阵上的问题）
+- 编辑关卡页面鼠标与图像脱离
+- 编辑关卡页面中的“箱子”按钮，绘制图片与预期不符
+- 当项目暂无初始关卡时点击“开始游戏”游戏会死机
+- <span style="text-decoration: line-through;">玩家无法正常移动</span>;
+  <br>
+  相信这些问题是可以解决的，并且从其中提升我的代码能力。

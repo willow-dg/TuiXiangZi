@@ -34,7 +34,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener, Mou
                 this.level = 1;//将关卡设为第一关
                 map = GameMapUtil.readMap(1);//kaishi第一关
             }
-        } else {//如果guanqia大于等于1
+        } else {//如果关卡大于等于1
             map = GameMapUtil.readMap(level);//则读取对应关卡数的关卡对象
         }
         data = map.getMapData();//获取用于保存关卡中所有元素的数组
@@ -51,12 +51,12 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener, Mou
     }
 
     //玩家移动
-    private void moveThePlayer(int xNext1, int xNext2, int yNext1, int yNext2) {
+    private void moveThePlayer(int xNext1, int yNext1, int xNext2, int yNext2) {
         if (data[xNext1][yNext1] instanceof Wall) {//如果玩家前方是墙
             return;//什么都不做
         }
         com.mr.model.Box box = new com.mr.model.Box(xNext1, yNext1);//在用户前方位置创建箱子对象
-        if (boxes.contains(box)) {//ruguo这个箱子在箱子列表中是存在的
+        if (boxes.contains(box)) {//如果这个箱子在箱子列表中是存在的
             int index = boxes.indexOf(box);//获取该箱子的在列表中的索引
             box = boxes.get(index);//取出列表中该箱子的对象
             if (data[xNext2][yNext2] instanceof Wall) {//如果箱子前面还墙
@@ -70,7 +70,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener, Mou
             } else if (box.isArrived()) {//如果箱子就在目的地上
                 box.leave();//箱子离开
             }
-            box.x = xNext2;//xiangzi在新的位置上
+            box.x = xNext2;//箱子在新的位置上
             box.y = yNext2;
         }
         player.x = xNext1;//玩家在新的位置上
@@ -95,7 +95,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener, Mou
             g2.drawImage(box.getImage(), box.x * 30, box.y * 30, 30, 30, this);
         }
         //绘制玩家图片
-        g2.drawImage(player.getImage(), player.x * 3, player.y * 30, 30, 30, this);
+        g2.drawImage(player.getImage(), player.x * 30, player.y * 30, 30, 30, this);
     }
 
 
@@ -160,7 +160,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener, Mou
                 gotoAnotherLevel(level);//重新开始当前关卡
                 break;
         }
-        repaint();//chonghui面板
+        repaint();//重绘面板
     }
 
     @Override

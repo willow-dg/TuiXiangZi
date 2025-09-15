@@ -61,7 +61,7 @@ public class StarPanel extends JPanel implements KeyListener {
                         frame.removeKeyListener(this);      //删除当前键盘事件
                         frame.setPanel(new GamePanel(frame, 0));        //进入游戏面板
                         break;
-                    case y2:        //如果选中第一个选项
+                    case y2:        //如果选中第二个选项
                         frame.removeKeyListener(this);      //删除当前键盘事件
                         frame.setPanel(new MapEditPanel(frame));        //进入关卡编辑器面板
                         break;
